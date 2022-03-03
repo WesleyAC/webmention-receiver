@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>webmention-receiver | {{ domain }}</title>
+	<updated>{{ last_updated }}</updated>
+	<id>{{ config.external_url }}/{{ domain }}</id>
+	<link href="{{ config.external_url }}/{{domain}}"/>
+	<link rel="self" href="{{ config.external_url }}/{{domain}}/feed.xml"/>
+	<author>
+		<name>webmention-receiver</name>
+		<uri>{{ config.external_url }}</uri>
+	</author>
+
+	{% for mention in mentions %}
+	<entry>
+		<title>Webmention: {{ mention.source }} → {{ mention.target }}</title>
+		<link href="{{ mention.source }}"/>
+		<id>{{ config.external_url }}/{{ domain }}/mention/{{ mention.id }}</id>
+		<updated>{{ mention.date_updated }}</updated>
+		<summary type="html">
+			Webmention:
+			&lt;br/&gt;
+			From: &lt;a href="{{ mention.source }}"&gt;{{ mention.source }}&lt;/a&gt;
+			&lt;br/&gt;
+			To: &lt;a href="{{ mention.target }}"&gt;{{ mention.target }}&lt;/a&gt;
+		</summary>
+	</entry>
+	{% endfor %}
+</feed>

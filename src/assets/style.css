@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body, h1, h2, h3, p {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	line-height: 1.5;
+	max-width: 60rem;
+	margin: 1.5rem auto 0 auto;
+	padding: 0 1rem;
+	background-color: #efe;
+	font-family: monospace;
+	font-size: 1.1rem;
+}
+
+p {
+	margin: 0.75rem 0;
+}
+
+pre {
+	padding: 0.5rem;
+	overflow-x: auto;
+}
+
+code {
+	padding: 0.1rem;
+}
+
+pre, code {
+	background-color: #eee;
+	border-radius: 0.3rem;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}

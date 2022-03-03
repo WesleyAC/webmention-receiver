@@ -1,0 +1,2 @@
+external_url = "http://localhost:3000"
+bind = "0.0.0.0:3000"

@@ -1,0 +1,33 @@
+[package]
+name = "webmention-receiver"
+version = "0.0.0"
+edition = "2021"
+
+[[bin]]
+name = "webmention-receiver"
+path = "src/main.rs"
+
+[lib]
+name = "procmacros"
+path = "src/procmacros/lib.rs"
+proc-macro = true
+
+[dependencies]
+hyper = { version = "0.14", features = ["full"] }
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_urlencoded = "0.7"
+url = { version = "2.2", features = ["serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+rusqlite = { version = "0.27", features = ["bundled", "backup", "url", "uuid"] }
+log = "0.4"
+env_logger = "0.9"
+uuid = { version = "0.8", features = ["serde", "v4"] }
+syn = "1.0"
+quote = "1.0"
+tera = "1"
+rust-embed = "6.3"
+lazy_static = "1.4"
+toml = "0.5"
+mime_guess = "2.0"
