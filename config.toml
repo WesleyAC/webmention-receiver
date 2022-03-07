@@ -1,2 +1,2 @@
-external_url = "http://localhost:3000"
-bind = "0.0.0.0:3000"
+external_url = "http://localhost:28081"
+bind = "127.0.0.1:28081"
